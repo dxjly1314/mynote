@@ -1076,3 +1076,14 @@ git config --global user.name  xx@xx.xxx
 
 ```
 
+## 解决:git push error: failed to push some refs to
+
+![image-20210219134804947](git.assets/image-20210219134804947.png)
+
+出现错误的原因是github中的README.md文件不在本地代码目录中。
+
+也就是说我们需要先将远程代码库中的任何文件先pull到本地代码库中，才能push新的代码到github代码库中。
+
+使用如下命令：git pull --rebase origin master
+
+然后再进行上传: git push -u origin master
