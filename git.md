@@ -1065,3 +1065,5 @@ To push the current branch and set the remote as upstream, use
 ```
 git push origin master
 ```
+
+该方法与第一种绑定不同，不会关联分支。如果不指定分支，还是会提示错误的。
