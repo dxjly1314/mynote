@@ -1019,7 +1019,9 @@ git reflog expire --expire=now --all // 清除所有操作记录日志
 
  
 
-# 应用
+# 使用过程遇到的问题
+
+## 撤销全部提交到暂存区的文件
 
 在git add 命令后 如何撤销已经加入到暂存区的文件呢？
 
@@ -1027,3 +1029,39 @@ git reflog expire --expire=now --all // 清除所有操作记录日志
  2.git reset HEAD -- filename 撤销特定目标
  3.git rm -cached filepath 将文件从缓存中删除
 
+## 本地分支无法push
+
+### 没有关联分支或没有指定分支
+
+```bash
+fatal: The current branch test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test
+```
+
+问题原因：就是让你指定当前分支的上游分支，不然不知道你想推到哪个分支，因为本地分支和远程分支名称并不限制必须一致。
+
+解决办法：
+
+> 解决方法 1
+
+只需要在输入 `git push -u origin dev`(远程分支名)， 因为本身我就在本地的`dev`分支上面，所以可以直接 `push`，不在dev 分支的话需要 `git checkout dev`切换到`dev`分支，个人建议最好是本地分支新建的时候与远程分支命名一致。
+这样就可以成功`push`
+补充：git push -u origin dev` 命令的意思是 建立远程分支 dev 和 关联本地`dev`和远程`dev`两步
+
+> 解决方法 2
+
+按照`git` 的提示，执行以下命令：
+
+```
+ git push --set-upstream origin dev
+```
+
+将远程 `dev` 分支和本地 `dev` 分支相关联。之后再执行 `git push` 即可。一般新建的分支在`push`的时候都需要执行这个命令和远端相关联。
+
+> 解决办法3 
+
+```
+git push origin master
+```
