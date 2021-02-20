@@ -1,4 +1,4 @@
-# 学习路线
+学习路线
 
 <p><a target="_blank" href="https://www.bilibili.com/video/BV1Kb411W75N">JavaSE</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1xW411u7ax">MySQL基础</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1eJ411c7rf">JDBC&nbsp;</a>--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1Y7411K7zz">JavaWeb</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1Vf4y127N5">Spring5</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1mW411M7YA">SpringMVC</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1mW411M737">MyBatis</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1TW411g7hP">Maven</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV17W411g7zP">Ssm框架整合案例</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1pW411A7a5">Git/GitHub</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1oW411u75R">Redis</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1KW411u7vy">MySQL高级优化</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1Ds411E76Y">MyBatisPlus</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1gW411W7wy">Spring注解驱动开发</a>&nbsp;--&gt; &nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1PW411r7iP">ZooKeeper</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1ns411c7jV">Dubbo</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV164411G7aB">消息中间件ActiveMQ</a>&nbsp;--&gt; <a target="_blank" href="https://www.bilibili.com/video/BV19K4y1L7MT">SpringBoot2</a>--&gt;&nbsp;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV18E411x7eT">SpringCloud</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1bE411T7oZ">尚筹网项目</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1dQ4y1A75e">在线教育项目</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1np4y1C7Yf">谷粒商城项目</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1Eb411P7bP">高频面试题第一季</a>&nbsp;--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV18b411M7xz">大厂面试题第二季&nbsp;</a>--&gt;&nbsp;<a target="_blank" href="https://www.bilibili.com/video/BV1Hy4y1B78T">大厂面试题第三季</a>&nbsp;</p>
 
@@ -8538,7 +8538,7 @@ Java 线程之间的通信由 Java 内存模型（JMM）控制。JMM 决定了�
 
 JMM 抽象示意图：
 
-![640](java.assets/p)jmm
+![img](java.assets/1ef68e9d4e87a983ce7ba077ff037c14570.png)
 
 
 
@@ -8550,7 +8550,7 @@ JMM 抽象示意图：
 
 步骤示意图：
 
-![640](java.assets/p)tongxin
+![img](java.assets/92c1f637b5827f0d0fc74faf48746c376fd.png)
 
 
 
@@ -8572,7 +8572,7 @@ JMM 抽象示意图：
 
 从 Java 源代码到最终实际执行的指令序列，会分别经历下面三种重排序：
 
-![640](java.assets/p)sort-again
+![img](java.assets/20180522194408859)
 
 
 
@@ -8589,13 +8589,13 @@ JMM 属于语言级的内存模型，它确保在不同的编译器和不同的�
 
 举个例子：
 
-![640](java.assets/p)example1
 
 
+![img](java.assets/20180522194440739)
 
 假设处理器A和处理器B按程序的顺序并行执行内存访问，最终却可能得到 x = y = 0。具体的原因如下图所示：
 
-![640](java.assets/p)exam1-ans
+![img](java.assets/201805221945099)
 
 
 
@@ -8635,7 +8635,7 @@ JSR-133 内存模型使用 happens-before 的概念来阐述操作之间的内�
 
 happens-before 与 JMM 的关系如下图所示：
 
-![640](java.assets/p)happens-before-jmm
+![img](java.assets/2018052219472817)
 
 
 
@@ -8673,13 +8673,13 @@ double area = pi * r * r;     //C
 
 上面三个操作的数据依赖关系如下图所示：
 
-![640](java.assets/p)abc
+![img](java.assets/20180522194803825)
 
 
 
 如上图所示，A 和 C 之间存在数据依赖关系，同时 B 和 C 之间也存在数据依赖关系。因此在最终执行的指令序列中，C 不能被重排序到 A 和 B 的前面（C 排到 A 和 B 的前面，程序的结果将会被改变）。但 A 和 B 之间没有数据依赖关系，编译器和处理器可以重排序 A 和 B 之间的执行顺序。下图是该程序的两种执行顺序：
 
-![640](java.assets/p)2018-02-27_16-52-44
+![img](java.assets/20180522194826248)
 
 
 
@@ -8711,7 +8711,7 @@ class Demo {
 
 1、当操作 1 和操作 2 重排序时，可能会产生什么效果？
 
-![640](java.assets/p)sort12
+![img](java.assets/20180522194853373)
 
 
 
@@ -8740,7 +8740,7 @@ class Demo {
 
 顺序一致性内存模型为程序员提供的视图如下：
 
-![640](java.assets/p)2018-02-27_17-55-09
+![img](java.assets/201805221949395)
 
 
 
@@ -8752,13 +8752,13 @@ class Demo {
 
 假设这两个线程使用监视器锁来正确同步：A 线程的三个操作执行后释放监视器锁，随后 B 线程获取同一个监视器锁。那么程序在顺序一致性模型中的执行效果将如下图所示：
 
-![640](java.assets/p)2018-02-27_18-01-51
+![img](java.assets/20180522194958747)
 
 
 
 现在我们再假设这两个线程没有做同步，下面是这个未同步程序在顺序一致性模型中的执行示意图：
 
-![640](java.assets/p)2018-02-27_18-04-20
+![img](java.assets/20180522195017818)
 
 
 
@@ -8792,7 +8792,7 @@ class demo {
 
 上面示例代码中，假设 A 线程执行 write() 方法后，B 线程执行 reade() 方法。这是一个正确同步的多线程程序。根据JMM规范，该程序的执行结果将与该程序在顺序一致性模型中的执行结果相同。下面是该程序在两个内存模型中的执行时序对比图：
 
-![640](java.assets/p)2018-02-27_22-01-59
+![img](java.assets/20180522195041491)
 
 
 
@@ -8812,7 +8812,7 @@ class demo {
 
 总线的工作机制：
 
-![640](https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_jpg/JdLkEI9sZfdlDyvTD7KicgibnucTxia5HKRX3p1yQJrZAEEiasj68zCAElbUW8WUCibWdQLSllRnr51Bic6XUc4nRUGw/640)2018-02-27_22-53-53
+![640](java.assets/6400005.png)
 
 
 
@@ -8824,7 +8824,7 @@ class demo {
 
 当单个内存操作不具有原子性，将可能会产生意想不到后果。请看下面示意图：
 
-![640](java.assets/p)2018-02-27_23-06-59
+![img](java.assets/20180522195119797)
 
 
 
@@ -8896,7 +8896,7 @@ public class VolatileTest {
 
 假设上面的程序 flag 变量用 volatile 修饰
 
-![640](java.assets/p)2018-02-28_10-13-39
+![img](java.assets/20180522195147748)
 
 
 
@@ -8904,7 +8904,7 @@ public class VolatileTest {
 
 下面是 JMM 针对编译器制定的 volatile 重排序规则表：
 
-![640](java.assets/p)2018-02-28_10-26-43
+![img](java.assets/20180522195207408)
 
 
 
@@ -8919,13 +8919,13 @@ public class VolatileTest {
 
 下面是保守策略下，volatile 写操作 插入内存屏障后生成的指令序列示意图：
 
-![640](java.assets/p)2018-02-28_10-31-14
+![img](java.assets/20180522195225320)
 
 
 
 下面是在保守策略下，volatile 读操作 插入内存屏障后生成的指令序列示意图：
 
-![640](java.assets/p)2018-02-28_10-38-12
+![img](java.assets/20180522195242830)
 
 
 
@@ -8953,7 +8953,7 @@ public class VolatileTest {
 
 AQS，非阻塞数据结构和原子变量类（java.util.concurrent.atomic 包中的类），这些 concurrent 包中的基础类都是使用这种模式来实现的，而 concurrent 包中的高层类又是依赖于这些基础类来实现的。从整体来看，concurrent 包的实现示意图如下：
 
-![640](java.assets/p)2018-02-28_14-58-32
+![img](java.assets/20180522195304481)
 
 
 
@@ -8987,13 +8987,13 @@ AQS，非阻塞数据结构和原子变量类（java.util.concurrent.atomic 包�
 
 JMM 是一个语言级的内存模型，处理器内存模型是硬件级的内存模型，顺序一致性内存模型是一个理论参考模型。下面是语言内存模型，处理器内存模型和顺序一致性内存模型的强弱对比示意图：
 
-![640](java.assets/p)2018-
+![img](java.assets/2018052219533449)
 
 
 
 ### 7.2 JMM 的设计示意图
 
-![640](java.assets/p)jmm-
+![img](java.assets/20180522195352616)
 
 
 
