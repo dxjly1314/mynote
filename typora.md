@@ -376,5 +376,16 @@ h5 {
   },
 ```
 
+# 一些主题文件
 
+FloraDark主题：
 
+​	**位置：**.\\_attchments\typora-theme-FloraDark-main
+
+​	**使用：**拷贝flora和flora-dark.css和flora-hans.css文件到主题文件夹，重启typora即可
+
+Vue主题:
+
+​	**位置：**.\\_attchments\typora-vue-theme-master
+
+​	**使用：**拷贝vue和vue-dark.css和vue.css文件到主题文件夹，重启typora即可
